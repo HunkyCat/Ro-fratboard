@@ -1,0 +1,104 @@
+﻿<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ROOOOOK Fretboard</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <div class="world-layer" aria-hidden="true">
+    <img class="world-item wi-1" src="./assets/eee-rock.gif" alt="">
+    <img class="world-item wi-2" src="./assets/user-pack-fire-skull.gif" alt="">
+    <img class="world-item wi-3" src="./assets/user-pack-shield-skeleton.gif" alt="">
+    <img class="world-item wi-4" src="./assets/user-pack-reaper.gif" alt="">
+    <img class="world-item wi-5" src="./assets/user-pack-cat-stare.gif" alt="">
+    <img class="world-item wi-6" src="./assets/user-pack-cat-okak.gif" alt="">
+    <img class="world-item wi-7" src="./assets/user-pack-cat-guitar.gif" alt="">
+    <img class="world-item wi-8" src="./assets/user-pack-you-rock.gif" alt="">
+    <img class="world-item wi-9" src="./assets/user-pack-trumpet-skull.gif" alt="">
+    <img class="world-item wi-10" src="./assets/user-pack-grave.jpg" alt="">
+    <img class="world-item wi-11" src="./assets/user-pack-burning-skeleton.gif" alt="">
+    <img class="world-item wi-12" src="./assets/user-pack-goth-rocker.gif" alt="">
+    <img class="world-item wi-13 bat-fly" src="./assets/user-pack-bat-fly.gif" alt="">
+    <img class="world-item wi-14 bat-fly" src="./assets/user-pack-bat-fly.gif" alt="">
+    <img class="world-item wi-15 bat-fly" src="./assets/user-pack-bat-fly.gif" alt="">
+    <img class="world-item wi-16 bat-fly" src="./assets/user-pack-bat-fly.gif" alt="">
+  </div>
+
+  <main class="app-shell">
+    <header class="panel topbar">
+      <h1>ROOOOOK FRETBOARD</h1>
+      <div class="top-actions">
+        <button id="randomRiffBtn" class="riff-btn" type="button">Сыграть случайный рифф</button>
+        <span id="riffStatus" class="riff-status" aria-live="polite"></span>
+        <button id="menuToggle" class="menu-toggle" type="button" aria-controls="controlsPanel" aria-expanded="false">Панель</button>
+      </div>
+    </header>
+
+    <section class="workspace">
+      <aside id="controlsPanel" class="panel controls-panel" data-open="true">
+        <div class="controls-grid">
+          <div class="field">
+            <label for="root">Тоника</label>
+            <select id="root" name="root"></select>
+          </div>
+
+          <div class="field">
+            <label for="scale">Гамма</label>
+            <select id="scale" name="scale"></select>
+          </div>
+
+          <div class="field">
+            <label for="tuning">Строй</label>
+            <select id="tuning" name="tuning"></select>
+          </div>
+
+          <div class="field">
+            <label for="custom_tuning">Свой строй</label>
+            <input type="text" id="custom_tuning" name="custom_tuning" placeholder="D G C F A D" disabled>
+          </div>
+
+          <div class="field">
+            <label for="mode">Режим</label>
+            <select id="mode" name="mode">
+              <option value="full">Полная</option>
+              <option value="caged">CAGED</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="caged_stage">Этап CAGED</label>
+            <select id="caged_stage" name="caged_stage">
+              <option value="C">C</option>
+              <option value="A">A</option>
+              <option value="G">G</option>
+              <option value="E">E</option>
+              <option value="D">D</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="frets">Лады (12-24)</label>
+            <input type="number" id="frets" name="frets" min="12" max="24" step="1" value="12">
+          </div>
+        </div>
+
+        <p id="status" class="status" aria-live="polite"></p>
+      </aside>
+
+      <section class="panel viewer-panel">
+        <div class="viewer-head">
+          <p id="modeHint" class="mode-hint">Полная</p>
+        </div>
+
+        <div class="fretboard-stage" id="fretboardStage">
+          <canvas id="fretboardCanvas" aria-label="Гриф гитары"></canvas>
+        </div>
+      </section>
+    </section>
+  </main>
+
+  <script src="./app.js"></script>
+</body>
+</html>
