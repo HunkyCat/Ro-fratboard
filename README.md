@@ -8,8 +8,6 @@ Interactive guitar fretboard visualizer for exploring scales, tunings, and CAGED
 - Standard and alternate tuning presets
 - Custom tuning input
 - Full-scale and CAGED display modes
-- Built-in random riff playback for quick practice ideas
-- Responsive layout for desktop and mobile
 
 ## Tech Stack
 
@@ -19,17 +17,12 @@ Interactive guitar fretboard visualizer for exploring scales, tunings, and CAGED
 - Canvas API
 - Web Audio API
 
-## Run Locally
+## Run
 
+Just open https://hunkycat.github.io/extremely-cool-rock-fratboard/
+or
 Open `index.html` in a browser.
 
-For a local server, you can also run:
-
-```powershell
-python -m http.server 8000
-```
-
-Then open `http://localhost:8000`.
 
 ## Project Structure
 
