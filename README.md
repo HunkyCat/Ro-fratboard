@@ -19,7 +19,7 @@ Interactive guitar fretboard visualizer for exploring scales, tunings, and CAGED
 
 ## Run
 
-Just open https://hunkycat.github.io/extremely-cool-rock-fratboard/
+Just open https://hunkycat.github.io/extremely-cool-rock-fretboard/
 
 
 ## Project Structure
